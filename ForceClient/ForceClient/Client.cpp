@@ -58,6 +58,22 @@ void Client::send_data(std::string data)
 		WSACleanup();
 	}
 }
+
+std::string Client::recv_data()
+{
+	std::string response = "none";
+	char buf[SIZE];
+
+	int send_result = recv(ConnectSocket, buf, SIZE, 0);
+
+	if (send_result == SOCKET_ERROR) {
+		printf("send failed with error: %d\n", WSAGetLastError());
+		closesocket(ConnectSocket);
+		WSACleanup();
+	}
+	response = buf;
+	return response;
+}
 void Client::close_conn()
 {
 	shutdown(ConnectSocket, SD_SEND);

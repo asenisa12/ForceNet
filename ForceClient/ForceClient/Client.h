@@ -17,6 +17,7 @@
 
 class Client
 {
+	static const int SIZE = 1024;
 	WSADATA wsaData;
 	SOCKET ConnectSocket = INVALID_SOCKET;
 	struct addrinfo *result = NULL,
@@ -26,6 +27,7 @@ public:
 	Client();
 	bool create_conn(std::string srv_addr, std::string srv_port);
 	void send_data(std::string);
+	std::string recv_data();
 	void close_conn();
 	~Client();
 
