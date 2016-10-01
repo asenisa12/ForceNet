@@ -77,7 +77,7 @@ void Server::client_work(SOCKET cliSock)
 
 		size = recv(cliSock, buff, 1024, 0);
 		buff[size] = '\0';
-		send(cliSock, buff, 1024, 0);
+		//send(cliSock, buff, 1024, 0);
 		printf("%s\n", buff);
 	} while (size > 0);
 

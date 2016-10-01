@@ -1,19 +1,15 @@
-﻿Build started 10/1/2016 3:33:43 PM.
-     1>Project "E:\ASEN\ForceServer\ForceServer\ForceServer\ForceServer.vcxproj" on node 2 (Build target(s)).
+﻿Build started 10/1/2016 6:23:13 PM.
+     1>Project "E:\ASEN\ForceNet\ForceServer\ForceServer\ForceServer.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         E:\ASEN\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\Server.cpp src\main.cpp
+         E:\ASEN\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\Server.cpp
          Server.cpp
-         Generating Code...
-     1>e:\asen\forceserver\forceserver\forceserver\src\server.cpp(69): warning C4715: 'Server::init': not all control paths return a value
-         Compiling...
-         main.cpp
-         Generating Code...
+     1>e:\asen\forcenet\forceserver\forceserver\src\server.cpp(69): warning C4715: 'Server::init': not all control paths return a value
        Link:
-         E:\ASEN\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\ASEN\ForceServer\ForceServer\Debug\ForceServer.exe" /INCREMENTAL /NOLOGO Ws2_32.lib Mswsock.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\ASEN\ForceServer\ForceServer\Debug\ForceServer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\ASEN\ForceServer\ForceServer\Debug\ForceServer.lib" /MACHINE:X86 Debug\main.obj
+         E:\ASEN\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\ASEN\ForceNet\ForceServer\Debug\ForceServer.exe" /INCREMENTAL /NOLOGO Ws2_32.lib Mswsock.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\ASEN\ForceNet\ForceServer\Debug\ForceServer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\ASEN\ForceNet\ForceServer\Debug\ForceServer.lib" /MACHINE:X86 Debug\main.obj
          Debug\Server.obj
-         ForceServer.vcxproj -> E:\ASEN\ForceServer\ForceServer\Debug\ForceServer.exe
-     1>Done Building Project "E:\ASEN\ForceServer\ForceServer\ForceServer\ForceServer.vcxproj" (Build target(s)).
+         ForceServer.vcxproj -> E:\ASEN\ForceNet\ForceServer\Debug\ForceServer.exe
+     1>Done Building Project "E:\ASEN\ForceNet\ForceServer\ForceServer\ForceServer.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:06.11
+Time Elapsed 00:00:14.62
