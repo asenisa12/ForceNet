@@ -70,16 +70,29 @@ bool Server::init()
 
 void Server::client_work(SOCKET cliSock)
 {
-	char buff[1024];
-	memset(buff, 0, 1024);
-	int size = 1024;
+	char buff[BUFF_SIZE];
+	memset(buff, 0, BUFF_SIZE);
+	int size = BUFF_SIZE;
+	
 	do {
 
-		size = recv(cliSock, buff, 1024, 0);
-//		buff[size] = '\0';
-		send(cliSock, buff, 1024, 0);
-		printf("%s\n", buff);
+		size = recv(cliSock, buff, BUFF_SIZE, 0);
+		coord[cliSock] = buff;
+
+		std::string enemy_coord="0,0,0";
+		for (auto cli : clients)
+			if (cli != cliSock)
+				enemy_coord = coord[cli];
+
+		send(cliSock, enemy_coord.c_str(), enemy_coord.size(), 0);
+		printf("%s\n", coord[cliSock].c_str(), clients.size());
 	} while (size > 0);
+	
+	client_mutex.lock();
+	if(cli_num>0)
+		cli_num--;
+	client_mutex.unlock();
+
 
 	closesocket(cliSock);
 	clients.erase(std::remove(clients.begin(), clients.end(), cliSock), clients.end());
@@ -87,7 +100,7 @@ void Server::client_work(SOCKET cliSock)
 
 void Server::run()
 {
-	int cli_num = 0;
+	cli_num = 0;
 	while (cli_num < MAX_CLIENTS)
 	{
 
@@ -112,6 +125,5 @@ Server::~Server()
 	for (auto cli : clients)
 		closesocket(cli);
 
-	//closesocket(ClientSocket);
 	WSACleanup();
 }
